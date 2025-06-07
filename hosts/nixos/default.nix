@@ -5,29 +5,31 @@
 # NixOS-WSL specific options are documented on the NixOS-WSL repository:
 # https://github.com/nix-community/NixOS-WSL
 
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, username, ... }:
 
 {
-  imports = [
-    # include NixOS-WSL modules
-    <nixos-wsl/modules>
-  ];
-
   wsl.enable = true;
-  wsl.defaultUser = "mel";
+  wsl.defaultUser = username;
 
-  # VSCode Setup
+  nixpkgs.config.allowUnfree = true;
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  
+  # given the users in this list the right to specify additional substituters via:
+  #    1. `nixConfig.substituers` in `flake.nix`
+  #    2. command line args `--options substituers http://xxx`
+  nix.settings.trusted-users = [ username ];
+
   environment.systemPackages = with pkgs; [
     wget
     git
-    vscodium
+    nixfmt-rfc-style
   ];
 
+  # Needed for VSCode
   programs.nix-ld = {
     enable = true;
     package = pkgs.nix-ld-rs; # only for NixOS 24.05
   };
-
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
