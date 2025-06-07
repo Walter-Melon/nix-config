@@ -2,13 +2,30 @@
   description = "NixOS configuration for me";
 
   inputs = {
-    # NixOS official package source, using the nixos-25.05 branch here
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    # NixOS official package source, using the nixos-unstable branch here
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = inputs @ { self, nixpkgs, nixos-wsl, ... }: {
     # Per host configuration
-    nixosConfigurations = {
+    nixosConfigurations = {      
+      # WSL2
+      nixos = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+
+        modules = [
+          ./hosts/nixos
+
+          nixos-wsl.nixosModules.default
+          {
+            system.stateVersion = "24.05";
+            wsl.enable = true;
+          }
+        ];
+      };
+
+      # Raspberry Pi 4
       pi4-tv = let
       in
         nixpkgs.lib.nixosSystem {
