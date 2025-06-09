@@ -31,6 +31,9 @@
     package = pkgs.nix-ld-rs; # only for NixOS 24.05
   };
 
+  # Enables building images for Raspberry Pi
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It's perfectly fine and recommended to leave
