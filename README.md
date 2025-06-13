@@ -17,6 +17,10 @@ This repository is home to the nix code that builds my systems.
 - [The nix command](https://wiki.nixos.org/wiki/Nix_command) (can be used on WSL2 with nix for e.g. flake templates)
 - [Rebuild ignoring files](https://discourse.nixos.org/t/running-nixos-rebuild-does-not-add-new-files-have-i-misunderstood-its-purpose/20664) (only includes files when they got `git add`ed)
 
+### Others NixOS's
+
+- [Minimal? Hyprland](https://github.com/JaKooLit/NixOS-Hyprland)
+- [Full OS?](https://gitlab.com/Zaney/zaneyos)
 
 ## How to install Nix and Deploy this Flake?
 
