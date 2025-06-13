@@ -16,7 +16,7 @@
   consoleKeyMap = "de";
 
   # Set Stylix Image
-  stylixImage = ../../wallpapers/AnimeGirlNightSky.jpg;
+  stylixImage = ../../modules/home/hyprland/face.jpg;
 
   # Set Waybar
   # Available options:
