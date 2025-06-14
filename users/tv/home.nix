@@ -5,7 +5,9 @@
     ../../modules/home/chromium.nix
     ../../modules/home/hyprland
     ../../modules/home/git.nix
+    ../../modules/home/gtk.nix
     ../../modules/home/kitty.nix
+    ../../modules/home/xdg.nix
   ];
 
   # Home Manager needs a bit of information about you and the
@@ -13,6 +15,10 @@
   home = {
     username = "tv";
     homeDirectory = "/home/tv";
+
+    packages = with pkgs; [
+      _1password-gui
+    ];
 
     # This value determines the Home Manager release that your
     # configuration is compatible with. This helps avoid breakage
