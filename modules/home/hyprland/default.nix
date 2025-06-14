@@ -8,6 +8,6 @@
     ./hyprland.nix
     # ./hyprlock.nix
     # ./pyprland.nix
-    # ./windowrules.nix
+    ./windowrules.nix
   ];
 }
