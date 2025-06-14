@@ -2,12 +2,7 @@
 
 {
   imports = [
-    ../../modules/home/chromium.nix
-    ../../modules/home/hyprland
-    ../../modules/home/git.nix
-    ../../modules/home/gtk.nix
-    ../../modules/home/kitty.nix
-    ../../modules/home/xdg.nix
+    ../../modules/home
   ];
 
   # Home Manager needs a bit of information about you and the

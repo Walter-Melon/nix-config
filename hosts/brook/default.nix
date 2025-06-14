@@ -3,6 +3,7 @@
 {
   imports = [
     ../../modules/drivers
+    ../../modules/core
     ./boot.nix
     ./hardware.nix
     ./network.nix

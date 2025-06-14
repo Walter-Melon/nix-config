@@ -22,6 +22,10 @@
    enable = true;
   };
 
+  programs.dconf = {
+    enable = true;
+  };
+
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
