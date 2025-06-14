@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../../modules/drivers
     ./boot.nix
     ./hardware.nix
     ./network.nix
@@ -10,5 +11,6 @@
     ./system.nix
   ];
 
+  drivers.intel.enable = true;
   system.stateVersion = "25.05";
 }
