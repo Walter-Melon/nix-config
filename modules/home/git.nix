@@ -1,10 +1,10 @@
-{host, ...}: let
-  inherit (import ../../hosts/${host}/variables.nix) gitUsername gitEmail;
-in {
+{ ... }: 
+
+{
   programs.git = {
     enable = true;
-    userName = "${gitUsername}";
-    userEmail = "${gitEmail}";
+    userName = "Walter-Melon";
+    userEmail = "mc.walter.melon@gmail.com";
 
     extraConfig = {
       # FOSS-friendly settings
