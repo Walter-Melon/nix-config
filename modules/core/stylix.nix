@@ -3,10 +3,7 @@
 {
   stylix = {
     enable = true;
-    image = pkgs.fetchurl {
-      url = "https://www.pixelstalk.net/wp-content/uploads/2016/05/Epic-Anime-Awesome-Wallpapers.jpg";
-      hash = "sha256-enQo3wqhgf0FEPHj2coOCvo7DuZv+x5rL/WIo4qPI50=";
-    };
+    image = ../../wallpapers/dejavu.png;
     polarity = "dark";
     opacity.terminal = 1.0;
 

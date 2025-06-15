@@ -5,7 +5,7 @@
 
   users.users.tv = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "networkmanager" ];
 
     # Allow the graphical user to login without password
     initialHashedPassword = "";

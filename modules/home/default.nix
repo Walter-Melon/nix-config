@@ -7,6 +7,7 @@
     ./kitty.nix
     ./stylix.nix
     ./swaync.nix
+    ./waybar/simple.nix
     ./qt.nix
     ./xdg.nix
   ];

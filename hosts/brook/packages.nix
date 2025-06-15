@@ -11,20 +11,11 @@
     })
   ];
 
-  nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     curl
     git
     htop
   ];
-
-  programs.hyprland = {
-   enable = true;
-  };
-
-  programs.dconf = {
-    enable = true;
-  };
 
   home-manager = {
     useUserPackages = true;
