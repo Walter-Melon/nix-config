@@ -11,5 +11,6 @@
     killall # For Killing All Instances Of Programs
     pavucontrol # For Editing Audio Levels & Devices
     playerctl # Allows Changing Media Volume Through Scripts
+    nwg-displays #configure monitor configs via GUI
   ];
 }
